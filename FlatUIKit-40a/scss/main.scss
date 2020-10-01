@@ -1,0 +1,377 @@
+    /*font-family: 'Varela Round', sans-serif;*/
+    
+    @import '_reset';
+    @import '_style';
+    @import '_mixins';
+    @import '_include-media';
+    @import '_header';
+    @import '_variables';
+    @import '_stylesheet';
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: auto;
+        max-width: 1200px;
+        width: 100%;
+        background: radial-gradient(ellipse at center, #c8a3a8 0%, #a874ac 33%, #4d4b8b 66%, #191a2d 100%) no-repeat;
+        height: 100vh;
+    }
+    
+    .container {
+        float: right;
+        width: 660px;
+        padding-top: 124px;
+        margin-right: 79px;
+        .kit-wrapper {
+            @include kit;
+        }
+    }
+    
+    .container .kit-wrapper:nth-child(odd) {
+        width: $custom-kit-width;
+        float: left;
+    }
+    
+    .container .kit-wrapper:nth-child(even) {
+        width: $custom-kit-width;
+        float: right;
+    }
+    
+    .login .header-wrapper {
+        @include kit-header($header-blue);
+    }
+    
+    .profile .header-wrapper {
+        @include kit-header($header-brown);
+    }
+    
+    .download .header-wrapper {
+        @include kit-header($header-green);
+    }
+    
+    .location .header-wrapper {
+        @include kit-header($header-yellow);
+    }
+    
+    .apply {
+        padding: 29px 26px 0px 26px;
+        border: $form-color;
+        background: $bg-opacity;
+        box-shadow: $bg-opacity-shadow;
+    }
+    
+    .apply .signup .row label {
+        margin-bottom: 9px;
+        font: $form-font;
+        color: $form-color;
+    }
+    
+    .apply .signup input[type="email"],
+    .apply .signup input[type="password"] {
+        margin-top: 7px;
+        margin-bottom: 15px;
+        background: $bg-opacity;
+        box-shadow: $form-shadow;
+        font: $form-font-label;
+        border-radius: 9px;
+        padding: 22px 13px;
+        width: 100%;
+        color: $form-color;
+        outline: none;
+        border: none;
+    }
+    
+    .apply .signup input[type="email"]::placeholder,
+    .apply .signup input[type="password"]::placeholder {
+        color: #fff;
+    }
+    
+    .apply .signup input[type="email"]:hover,
+    .apply .signup input[type="password"]:hover {
+        cursor: pointer;
+        background-color: $form-hov;
+        box-shadow: $form-shadow-hov;
+        color: $form-color;
+    }
+    
+    .choose-sign {
+        overflow: hidden;
+        text-align: center;
+        color: #fff;
+        font: $form-font-choise;
+        padding-bottom: 19px;
+    }
+    
+    .choose-sign:before {
+        margin-left: -100%;
+    }
+    
+    .choose-sign:after {
+        margin-right: -100%;
+    }
+    
+    .choose-sign:before,
+    .choose-sign:after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        box-sizing: border-box;
+        width: 100%;
+        height: 1px;
+        background: $sign-line;
+        border: solid transparent;
+        border-width: 0 10px;
+    }
+    
+    .bottom-kit {
+        height: 60px;
+        background-color: $bottom-bg;
+        box-shadow: $bottom-shadow;
+    }
+    
+    .networks {
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        li {
+            float: left;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+    
+    .networks .twitter:before {
+        @include networks("\ea96");
+    }
+    
+    .networks .google:before {
+        @include networks("\ea8b");
+    }
+    
+    .networks .facebook:before {
+        @include networks("\ea90");
+    }
+    
+    .networks a:hover:before {
+        background: $sign-line;
+    }
+    
+    .bg-profile {
+        box-shadow: $header-shadow, $header-inset;
+        font-size: 0;
+        position: relative;
+        .bg-container {
+            width: 100%;
+            position: absolute;
+            margin: auto;
+            left: 31px;
+            top: 31px;
+            img {
+                float: left;
+                border-radius: 50%;
+                border: 4px solid rgba(235, 235, 235, .4);
+                display: block;
+            }
+            h3 {
+                padding-top: 28px;
+                float: left;
+                padding-left: 10px;
+                color: #fff;
+                color: #fff;
+                font: $profile-name-font;
+                span {
+                    font: $form-font-label;
+                    padding-top: 3px;
+                    display: block;
+                }
+            }
+        }
+    }
+    
+    .profile-name .city:before {
+        content: "\e947";
+        font-size: 14px;
+        color: #fff;
+        font-family: 'icomoon' !important;
+        padding-right: 7px;
+    }
+    
+    .profile-information {
+        background: $bg-opacity;
+        box-shadow: $bg-opacity-shadow;
+        padding: 38px 30px 0 30px;
+        .follow-wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 33px;
+            .follow h4 {
+                position: relative;
+                font: $form-font-label;
+                color: #fff;
+                span {
+                    display: block;
+                    font: $profile-followers-num;
+                }
+            }
+        }
+    }
+    
+    .followers h4::before {
+        content: '';
+        position: absolute;
+        border-left: 1px solid $profile-border-opacity;
+        padding-right: 50px;
+        height: 78px;
+        bottom: -16px;
+        right: 74px;
+    }
+    
+    .button-follow {
+        background: $bottom-bg;
+        color: $bottom-shadow;
+        padding: 10px 20px;
+        display: inline-block;
+        border-radius: 10px;
+        text-decoration: none;
+        margin-bottom: 31px;
+        cursor: pointer;
+        .btn-container-follow {
+            padding: 10px 60px;
+            text-align: center;
+            a {
+                text-decoration: none;
+                color: #fff;
+                text-transform: uppercase;
+                font: $header-font-base;
+            }
+        }
+    }
+    
+    .button-follow:hover {
+        background: $header-brown;
+    }
+    
+    .download-wrapper {
+        background: $bg-opacity;
+        box-shadow: $bg-opacity-shadow;
+    }
+    
+    .loader-container {
+        width: 100%;
+        text-align: center;
+        height: 300px;
+        position: relative;
+        img {
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -53px;
+            bottom: 0;
+            margin: auto;
+        }
+        .cloud {
+            border-radius: 50%;
+            padding: 24px;
+            background: $profile-border-opacity;
+        }
+    }
+    
+    .load-status {
+        h3 {
+            font: $form-font-label;
+            color: #fff;
+            text-align: center;
+            padding-bottom: 45px;
+            margin-top: -73px;
+            span {
+                display: block;
+                font: $profile-followers-num;
+            }
+        }
+    }
+    
+    .location {
+        margin-top: -38px;
+    }
+    
+    .location-container {
+        background: $bg-opacity;
+        box-shadow: $bg-opacity-shadow;
+        padding: 26px 27px 59px 26px;
+        position: relative;
+        border-radius: 0 0 9px 9px;
+        margin-bottom: 22px;
+        .location-city {
+            float: left;
+            color: #fff;
+            font: $form-font-label;
+        }
+        .checkpoint {
+            float: right;
+        }
+    }
+    
+    .location-city::before {
+        content: "\e947";
+        font-size: 24px;
+        color: $sign-line;
+        font-family: 'icomoon' !important;
+        padding-right: 3px;
+    }
+    
+    .location-city::after {
+        content: "";
+        position: absolute;
+        border-left: 1px solid $profile-border-opacity;
+        padding-right: 50px;
+        height: 100%;
+        top: 0px;
+        right: 33px;
+    }
+    
+    .checkpoint:before {
+        content: "\ea10";
+        font-size: 24px;
+        color: $sign-line;
+        font-family: 'icomoon' !important;
+    }
+    
+    .button {
+        margin: 0 25px;
+        div {
+            margin-bottom: 11px;
+        }
+        .hover-active {
+            display: none;
+        }
+    }
+    
+    .btn:hover {
+        .custom {
+            display: none;
+        }
+        .hover-active {
+            display: block;
+        }
+    }
+    
+    .btn1 {
+        @include btn($button-white);
+    }
+    
+    .btn2 {
+        @include btn($button-indigo);
+    }
+    
+    .btn3 {
+        @include btn($button-blue);
+    }
+    
+    .btn4 {
+        @include btn($button-green);
+    }

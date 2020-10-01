@@ -1,0 +1,59 @@
+/*Kit-wrapper Width*/
+
+$custom-kit-width: 45.5%;
+
+/*Main Bg-kit Features*/
+
+$bg-opacity :rgba(255, 255, 255, 0.102);
+$bg-opacity-shadow:inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
+
+/*Header-kit Features*/
+
+$header-blue: #6d69b1;
+$header-brown: #b7855c;
+$header-green: #688b79;
+$header-yellow: #ad936f;
+$header-shadow:0px 1px 0px 0px rgba(35, 47, 124, 0.54);
+$header-inset: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+$header-font-base: 20px 'proxima_novabold';
+
+/*Application-form Features*/
+
+$form-font-choise: 14px 'skolar_cyrillicregular',
+sans-serif;
+$form-font-label: 16px 'proxima_novaregular';
+$form-font: 15px 'Varela Round',
+sans-serif;
+$form-color: #fff;
+$form-shadow :inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+
+/*Application hover*/
+
+$form-hov: rgba(255, 255, 255, 0.6);
+$form-shadow-hov: 0px 1px 0px 0px rgba(255, 255, 255, 0.2),
+inset 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
+
+/*Social Networks Features*/
+
+$sign-line:rgba(255, 255, 255, 0.3);
+
+/*Bottom-kit Features*/
+
+$bottom-bg:rgba(255, 255, 255, 0.4);
+$bottom-shadow :inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+
+/*Profile Features*/
+
+$profile-name-font: 20px 'proxima_novabold',
+sans-serif;
+$profile-followers-num :30px 'proxima_novalight',
+sans-serif;
+$profile-border-opacity: rgba(255, 255, 255, 0.2);
+
+/*Button Features*/
+
+$button-opacity :inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+$button-white: rgba(255, 255, 255, 0.4);
+$button-indigo :#334980;
+$button-blue: #416e8d;
+$button-green: #336c48;

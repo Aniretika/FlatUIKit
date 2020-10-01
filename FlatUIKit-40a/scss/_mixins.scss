@@ -1,0 +1,49 @@
+@mixin kit {
+    overflow: hidden;
+    border-radius: 9px;
+    margin-bottom: 128px;
+    width: 100%;
+}
+
+@mixin kit-header($bg-header) {
+    background: $bg-header;
+    box-shadow: $header-shadow, $header-inset;
+    font: $header-font-base;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 25px 0px 15px 0px;
+}
+
+@mixin networks($icon-font) {
+    content: $icon-font;
+    padding: 8px;
+    border: 2px solid #fff;
+    box-shadow: 0px 1px 0px 0px rgba(156, 132, 168, 0.4);
+    border-radius: 50%;
+    font-size: 15px;
+    font-family: 'icomoon' !important;
+    color: #fff;
+}
+
+@mixin btn ($bg) {
+    background: $bg;
+    box-shadow: $button-opacity;
+    color: $form-color;
+    padding: 20px 20px;
+    display: inline-block;
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    font: 20px 'proxima_novabold', sans-serif;
+}
+
+@mixin clearfix {
+    &:after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
